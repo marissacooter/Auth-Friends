@@ -3,29 +3,32 @@ import {withRouter} from 'react-router-dom';
 import {axiosWithAuth} from '../utils/axiosWithAuth';
 
 class FriendsList extends React.Component {
-    state = {
-        FriendsList: []
-    };
-
+    constructor(props) {
+        super(props)
+        this.state = {
+            friendslist: []
+        }
+    }
 
 getData = () => {
     axiosWithAuth()
-        .get('/api/data')
+        .get('http://localhost:5000/api/friends')
         .then(res => {
-            // this.setState({
-            //     FriendsList: res.data.data.filter(
-            //         friend => 
-            //             (friend.username = {username})
-            //     )
-            // });
+            this.setState ({
+                friendslist: res.data
+            })
         })
         .catch(err => console.log([err]));
 };
 
+componentDidMount() {
+    this.getData();
+}
+
 render() {
     return (
         <div>
-
+            {this.state.friendslist.map(friend => <div><p>{friend.name}</p><p>{friend.age}</p><p>{friend.email}</p></div>)}
         </div>
     )
 }
