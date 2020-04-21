@@ -12,6 +12,7 @@ function App() {
       <div className="App">
         <ProtectedRoute path="/friendslist" component={FriendsList} />
         <Route path="/login" component={Login}/>
+        <ProtectedRoute path="/addfriend" component={AddFriend}/>
         Hi
       </div>
     </Router>
