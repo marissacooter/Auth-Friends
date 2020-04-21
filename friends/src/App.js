@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from "./components/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
 import FriendsList from "./components/FriendsList";
@@ -11,6 +11,7 @@ function App() {
     <Router>
       <div className="App">
         <ProtectedRoute path="/friendslist" component={FriendsList} />
+        <Route path="/login" component={Login}/>
         Hi
       </div>
     </Router>
