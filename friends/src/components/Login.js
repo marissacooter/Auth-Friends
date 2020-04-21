@@ -41,7 +41,7 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="Login">
         {this.state.isLoading && <p>Loading...</p>}
         <form onSubmit={this.login}>
           <input

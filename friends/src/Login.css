@@ -1,0 +1,41 @@
+.Login {
+background-color: hotpink;
+}
+
+body {
+    background-color: hotpink;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: 10px;
+    padding-right: 30px;
+    color: mediumvioletred;
+    font-weight: bolder;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98%;
+    margin: 10px;
+}
+
+input {
+    border: 3px solid mediumvioletred;
+    border-radius: 20px;
+    margin: 20px;
+    background-color: plum;
+    color: mediumvioletred;
+}
+
+button {
+    border: 3px solid mediumvioletred;
+    border-radius: 20px;
+    color: mediumvioletred;
+    background-color: plum;
+}
